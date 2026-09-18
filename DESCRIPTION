@@ -1,0 +1,31 @@
+Package: narrate
+Title: Verified Narration of Tables for Reproducible Reports
+Version: 0.0.0.9000
+Authors@R: 
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+Description: Generate the prose that accompanies a table in a reproducible
+    report (R Markdown or Quarto) with a large language model via 'ellmer',
+    and verify that every figure in the generated text exists in the table.
+    Figures that do not are diagnosed as rounded, converted from a proportion,
+    or unsourced. Includes a mode to reproduce a full periodic report from the
+    previous edition and the new tables, a hash-based cache so that rendering
+    never re-calls the API, and a log of every call (model, tokens, latency,
+    unverified figures) for comparing models.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends: 
+    R (>= 4.1)
+Imports: 
+    cli,
+    ellmer (>= 0.4.0),
+    rlang (>= 1.1.0),
+    utils
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+URL: https://github.com/USER/narrate
+BugReports: https://github.com/USER/narrate/issues
+Config/roxygen2/version: 8.1.0
